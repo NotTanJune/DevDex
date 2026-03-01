@@ -32,7 +32,7 @@ DevDex is a CLI tool that scans a project codebase, runs a short interactive int
 ### Install
 
 ```bash
-git clone https://github.com/your-username/devdex.git
+git clone https://github.com/NotTanJune/DevDex.git
 cd devdex
 uv pip install -e .
 ```
