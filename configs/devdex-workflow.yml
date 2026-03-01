@@ -1,0 +1,49 @@
+# DevDex NAT Workflow Configuration
+# Run with: nat run --config_file configs/devdex-workflow.yml
+
+llms:
+  devstral:
+    model_name: mistralai/devstral-2-123b-instruct-2512
+    model_type: nim
+    nim_base_url: https://integrate.api.nvidia.com/v1
+
+  mistral_large:
+    model_name: mistralai/mistral-large-3-675b-instruct-2512
+    model_type: nim
+    nim_base_url: https://integrate.api.nvidia.com/v1
+
+  ministral:
+    model_name: mistralai/ministral-14b-instruct-2512
+    model_type: nim
+    nim_base_url: https://integrate.api.nvidia.com/v1
+
+functions:
+  - name: devdex/codebase_scanner
+    llm_name: devstral
+  - name: devdex/project_interviewer
+    llm_name: mistral_large
+  - name: devdex/privacy_policy_gen
+    llm_name: mistral_large
+  - name: devdex/tos_gen
+    llm_name: mistral_large
+  - name: devdex/appstore_gen
+    llm_name: mistral_large
+  - name: devdex/landing_page_gen
+    llm_name: mistral_large
+  - name: devdex/checklist_gen
+    llm_name: ministral
+
+executor:
+  type: sequential
+  functions:
+    - devdex/codebase_scanner
+    - devdex/project_interviewer
+    - devdex/privacy_policy_gen
+    - devdex/tos_gen
+    - devdex/appstore_gen
+    - devdex/landing_page_gen
+    - devdex/checklist_gen
+
+telemetry:
+  type: weave
+  project_name: devdex
