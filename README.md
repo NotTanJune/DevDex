@@ -1,4 +1,4 @@
-# DevDex
+# DevDéx
 
 **Scan your codebase. Generate your launch kit. Gotta ship 'em all.**
 
