@@ -8,18 +8,18 @@
 
 ---
 
-DevDex is a CLI tool that scans a project codebase, runs a short interactive interview, and generates a complete deployment-ready launch kit — privacy policy, terms of service, App Store description, landing page, and deployment checklist — in one shot.
+DevDex is a CLI tool that scans a project codebase, runs a short interactive interview, and generates a complete deployment-ready launch kit - privacy policy, terms of service, App Store description, landing page, and deployment checklist - in one shot.
 
 ## Features
 
-- **Codebase scanning** — Auto-detects frameworks, SDKs, data collection patterns, auth methods, and color themes
-- **Smart interview** — Platform-aware questionnaire that auto-fills answers from scan results
-- **6 artifact types** — Privacy policy, terms of service, App Store description, landing page (HTML), deployment checklist, support page
-- **Multi-provider** — Works with NVIDIA NIM (free), Mistral AI, OpenAI, or any OpenAI-compatible API
-- **Self-improvement** — Rates artifacts, stores feedback, and injects improvement context into future generations
-- **Fine-tuning** — Export training data and fine-tune with Unsloth, MLX, TRL/PEFT, or Mistral API
-- **Full observability** — W&B Weave auto-traces every LLM call; wandb logs feedback metrics
-- **Interactive deployment guide** — Step-by-step checklist walkthrough with progress saving
+- **Codebase scanning** - Auto-detects frameworks, SDKs, data collection patterns, auth methods, and color themes
+- **Smart interview** - Platform-aware questionnaire that auto-fills answers from scan results
+- **6 artifact types** - Privacy policy, terms of service, App Store description, landing page (HTML), deployment checklist, support page
+- **Multi-provider** - Works with NVIDIA NIM (free), Mistral AI, OpenAI, or any OpenAI-compatible API
+- **Self-improvement** - Rates artifacts, stores feedback, and injects improvement context into future generations
+- **Fine-tuning** - Export training data and fine-tune with Unsloth, MLX, TRL/PEFT, or Mistral API
+- **Full observability** - W&B Weave auto-traces every LLM call; wandb logs feedback metrics
+- **Interactive deployment guide** - Step-by-step checklist walkthrough with progress saving
 
 ## Quick Start
 
@@ -139,11 +139,11 @@ All artifacts are saved to `<project>/devdex-output/` by default.
                                        └──────────────┘
 ```
 
-1. **Generate** — `devdex scan` produces artifacts while W&B Weave auto-traces every LLM call
-2. **Rate** — User rates each artifact (1-5) with optional edit descriptions
-3. **Store** — Feedback is stored in Supabase with Mistral embeddings for semantic search
-4. **Improve** — Next generation loads past feedback and injects improvement context into prompts
-5. **Fine-tune** — High-rated artifacts become training data for model fine-tuning
+1. **Generate** - `devdex scan` produces artifacts while W&B Weave auto-traces every LLM call
+2. **Rate** - User rates each artifact (1-5) with optional edit descriptions
+3. **Store** - Feedback is stored in Supabase with Mistral embeddings for semantic search
+4. **Improve** - Next generation loads past feedback and injects improvement context into prompts
+5. **Fine-tune** - High-rated artifacts become training data for model fine-tuning
 
 
 ## Environment Variables
